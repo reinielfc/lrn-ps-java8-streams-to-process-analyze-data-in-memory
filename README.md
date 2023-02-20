@@ -5,8 +5,8 @@
 3. Using the Stream API to Map, Filter, and Reduce Data [[GITHUB][branch.gh.p3]]
 4. Building a Stream from Data in Memory [[GITHUB][branch.gh.p4]]
 5. Converting a For Loop to a Stream [[GITHUB][branch.gh.p5]]
-6. **Reducing Data to Compute Statistics** [[GITHUB][branch.gh.p6]]
-7. Collecting Data from Streams to Create Lists and Sets [[GITHUB][branch.gh.p7]]
+6. Reducing Data to Compute Statistics [[GITHUB][branch.gh.p6]]
+7. **Collecting Data from Streams to Create Lists and Sets** [[GITHUB][branch.gh.p7]]
 8. Creating and Analyzing Histograms from Streams [[GITHUB][branch.gh.p8]]
 
 [url.course]: https://app.pluralsight.com/library/courses/java-streams-process-analyze-data-memory

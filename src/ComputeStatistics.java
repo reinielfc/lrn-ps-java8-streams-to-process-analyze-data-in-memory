@@ -3,59 +3,51 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.DoubleSummaryStatistics;
-import java.util.NoSuchElementException;
-import java.util.function.ToDoubleFunction;
+import java.util.List;
+import java.util.Set;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ComputeStatistics {
     public static void main(String[] args) {
-        String lineForNewYork = "1;New York;New York;8336817;780.9";
-        ToDoubleFunction<String> lineToDensity = line -> {
-            String [] tokens = line.split(";");
+        Function<String, String> lineToName = line -> line.split(";")[1];
 
-            String populationAsString = tokens[3];
-            int population = Integer.parseInt(populationAsString);
-
-            String landAreaAsString = tokens[4].replace(",","");
-            double landArea = Double.parseDouble(landAreaAsString);
-
-            return population / landArea;
-        };
-
-        double density = lineToDensity.applyAsDouble(lineForNewYork);
-        System.out.printf("density of New York = %s people per square kilometer%n", density);
-
-        printMaxDensity(lineToDensity);
-        printSummaryStatistics(lineToDensity);
-    }
-
-    private static void printMaxDensity(ToDoubleFunction<String> lineToDensity) {
         // https://en.wikipedia.org/w/index.php?title=List_of_United_States_cities_by_population
         Path path = Paths.get("data/cities.csv");
+        Set<String> cities = null;
         try (Stream<String> lines = Files.lines(path, StandardCharsets.ISO_8859_1)) {
-            double maxDensity = lines.skip(2)
-                    .mapToDouble(lineToDensity)
-                    .max()
-                    .orElseThrow(NoSuchElementException::new);
-            System.out.println("maxDensity = " + maxDensity);
+            cities = lines.skip(2)
+                    .map(lineToName)
+                    .collect(Collectors.toSet());
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+        System.out.println("# cities = " + cities.size());
 
-    private static void printSummaryStatistics(ToDoubleFunction<String> lineToDensity) {
-        // https://en.wikipedia.org/w/index.php?title=List_of_United_States_cities_by_population
-        Path path = Paths.get("data/cities.csv");
-        try (Stream<String> lines = Files.lines(path, StandardCharsets.ISO_8859_1)) {
-            DoubleSummaryStatistics summaryStatistics = lines.skip(2)
-                    .mapToDouble(lineToDensity)
-                    .summaryStatistics();
-            System.out.println("summaryStatistics = " + summaryStatistics);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+        List<String> citiesWithA = cities.stream()
+                .filter(city -> city.startsWith("A"))
+                .collect(Collectors.toList());
+        System.out.println("citiesWithA = " + citiesWithA);
 
+        //Object[] objects = cities.stream().toArray(); // array of objects (not what we want)
+        String[] strings = cities.stream().toArray(String[]::new); // array of strings
+        System.out.println("# strings = " + strings.length);
+
+        String joined = cities.stream()
+                .filter(name -> name.length() == 4)
+                //.collect(Collectors.joining());
+                //.collect(Collectors.joining(", "));
+                .collect(Collectors.joining(", ", "[", "]"));
+        System.out.println("joined = " + joined);
+
+        String joinedEmpty = Stream.<String>empty()
+                .collect(Collectors.joining(",", "[", "]"));
+        System.out.println("joinedEmpty = " + joinedEmpty);
+
+        String joinedOneElement = Stream.<String>of("one")
+                .collect(Collectors.joining(",", "[", "]"));
+        System.out.println("joinedOneElement = " + joinedOneElement);
+    }
 
 }
