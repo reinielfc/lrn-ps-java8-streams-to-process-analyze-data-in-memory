@@ -10,12 +10,12 @@
 8. Creating and Analyzing Histograms from Streams [[GITHUB][branch.gh.p8]]
 
 [url.course]: https://app.pluralsight.com/library/courses/java-streams-process-analyze-data-memory
-[branch.gh.main]: https://github.com/reinielfc/lrn-ps-java8-lambda-expressions/tree/main
-[branch.gh.p1]: https://github.com/reinielfc/lrn-ps-java8-lambda-expressions/tree/1-CourseOverview 
-[branch.gh.p2]: https://github.com/reinielfc/lrn-ps-java8-lambda-expressions/tree/2-ProcessingDataUsingTheMapFilterReduceAlgorithm
-[branch.gh.p3]: https://github.com/reinielfc/lrn-ps-java8-lambda-expressions/tree/3-UsingTheStreamApiToMapFilterAndReduceData
-[branch.gh.p4]: https://github.com/reinielfc/lrn-ps-java8-lambda-expressions/tree/4-BuildingAStreamFromDataInMemory
-[branch.gh.p5]: https://github.com/reinielfc/lrn-ps-java8-lambda-expressions/tree/5-ConvertingAForLoopToAStream
-[branch.gh.p6]: https://github.com/reinielfc/lrn-ps-java8-lambda-expressions/tree/6-ReducingDataToComputeStatistics
-[branch.gh.p7]: https://github.com/reinielfc/lrn-ps-java8-lambda-expressions/tree/7-CollectingDataFromStreamsToCreateListsAndSets
-[branch.gh.p8]: https://github.com/reinielfc/lrn-ps-java8-lambda-expressions/tree/8-CreatingAndAnalyzingHistogramsFromStreams
+[branch.gh.main]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/main
+[branch.gh.p1]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/1-CourseOverview 
+[branch.gh.p2]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/2-ProcessingDataUsingTheMapFilterReduceAlgorithm
+[branch.gh.p3]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/3-UsingTheStreamApiToMapFilterAndReduceData
+[branch.gh.p4]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/4-BuildingAStreamFromDataInMemory
+[branch.gh.p5]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/5-ConvertingAForLoopToAStream
+[branch.gh.p6]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/6-ReducingDataToComputeStatistics
+[branch.gh.p7]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/7-CollectingDataFromStreamsToCreateListsAndSets
+[branch.gh.p8]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/8-CreatingAndAnalyzingHistogramsFromStreams
