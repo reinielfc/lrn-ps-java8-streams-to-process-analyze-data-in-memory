@@ -9,6 +9,10 @@
 7. Collecting Data from Streams to Create Lists and Sets [[GITHUB][branch.gh.p7]]
 8. Creating and Analyzing Histograms from Streams [[GITHUB][branch.gh.p8]]
 
+## Additional Resources
+
+- Learn With Pluralsight: Using Lambda Expressions in Java 8 Code [[GITHUB][resource.gh.lrn-ps-java8-lambda-expressions]]
+
 [url.course]: https://app.pluralsight.com/library/courses/java-streams-process-analyze-data-memory
 [branch.gh.main]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/main
 [branch.gh.p1]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/1-CourseOverview 
@@ -19,3 +23,4 @@
 [branch.gh.p6]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/6-ReducingDataToComputeStatistics
 [branch.gh.p7]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/7-CollectingDataFromStreamsToCreateListsAndSets
 [branch.gh.p8]: https://github.com/reinielfc/lrn-ps-java8-streams-to-process-analyze-data-in-memory/tree/8-CreatingAndAnalyzingHistogramsFromStreams
+[resource.gh.lrn-ps-java8-lambda-expressions]: https://github.com/reinielfc/lrn-ps-java8-lambda-expressions
